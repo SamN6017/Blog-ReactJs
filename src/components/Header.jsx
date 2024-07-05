@@ -1,5 +1,18 @@
+// src/components/Header.jsx
 import React from "react";
+import { Link } from "react-router-dom"; // Assuming you're using react-router for navigation
 
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <header className="header">
+      <div className="brand">
+        <Link to="/">My Blog</Link>
+      </div>
+      <nav className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="/form">Add New Post</Link>
+        <Link to="/posts">Posts</Link>
+      </nav>
+    </header>
+  );
 }
