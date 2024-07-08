@@ -47,6 +47,15 @@ button,
   text-align: center;
 }
 
+.button.delete {
+  margin-left: 10px;
+  background-color: #dc3545;
+}
+
+.button.delete:hover {
+  background-color: #c82333;
+}
+
 button:hover,
 .button:hover {
   background-color: #218838;

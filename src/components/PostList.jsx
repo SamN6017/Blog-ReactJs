@@ -54,7 +54,7 @@ export const samplePosts = [
 ];
 
 export default function PostList() {
-  const { posts } = useContext(PostContext);
+  const { posts, removePost } = useContext(PostContext);
   return (
     <div className="post-list">
       {posts.map((item) => (
@@ -66,9 +66,12 @@ export default function PostList() {
           <Link to={`/post/${item.id}`} className="button">
             See Post
           </Link>
+          <button onClick={() => removePost(item.id)} className="button delete">
+            Delete Post
+          </button>
         </div>
       ))}
-      {samplePosts.map((item) => (
+      {/* {samplePosts.map((item) => (
         <div key={item.id} className="post-preview">
           <h2>{item.name}</h2>
           <img src={item.url} alt={item.name} className="post-image" />
@@ -78,7 +81,7 @@ export default function PostList() {
             See Post
           </Link>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }

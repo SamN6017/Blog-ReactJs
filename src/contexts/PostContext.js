@@ -26,12 +26,21 @@ export const PostProvider = ({ children }) => {
     });
   }
 
+  // Update Post
+  function updatePost(post) {
+    dispatch({
+      type: "UPDATE_POST",
+      payload: post,
+    });
+  }
+
   return (
     <PostContext.Provider
       value={{
         posts: state.posts,
         addPost,
         removePost,
+        updatePost,
       }}
     >
       {children}

@@ -15,10 +15,10 @@ function App() {
         <BrowserRouter>
           <Header />
           <div className="container">
-            <h1>My Blog</h1>
+            <h1>React-Blogs</h1>
             <Routes>
               <Route path="/form" element={<PostForm />} />
-              <Route path="/posts" element={<PostList />} />
+              <Route path="/" element={<PostList />} />
               <Route path="/post/:id" element={<Post />} />
             </Routes>
           </div>
